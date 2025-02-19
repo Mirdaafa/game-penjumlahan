@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Penjumlahan:)</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href=''>Game Penjumlahan.</a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href= "index.html">Beranda</a></li>
+                </ul>
+                <body background="background 2.jpg">
+                </body>
+            </div>
+        </div>
+    </nav>
+        </section>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Hitung Akuuu</h1>
+            <h2>Masukkan dua angka untuk dijumlahkan:</h2>
+            <input type="number" id="num1" placeholder="Angka 1">
+            +
+            <input type="number" id="num2" placeholder="Angka 2">
+            <button id="calculateButton">Hitung</button>
+            <h3>Hasil: <span id="result">?</span></h3>
+            <div class="items" id="items"></div>
+            <img id="displayImage" src="">
+        </div>
+        <script src="script.js"></script>
+        <script>
+            document.getElementById("calculateButton").addEventListener("click", function() {
+                let num1 = parseInt(document.getElementById("num1").value) || 0;
+                let num2 = parseInt(document.getElementById("num2").value) || 0;
+                let sum = num1 + num2;
+                document.getElementById("result").textContent = sum;
+                
+                let itemsContainer = document.getElementById("items");
+                itemsContainer.innerHTML = "";
+                
+                for (let i = 0; i < sum; i++) {
+                let img = document.createElement("img");
+                img.src = "apel.png";
+                img.alt = "bintang.webp";
+                img.style.width = "30px";  // Menetapkan lebar gambar
+                img.style.height = "auto"; // Menjaga rasio tinggi agar tetap sesuai
+                itemsContainer.appendChild(img);
+                }
+                
+                let displayImage = document.getElementById("bintang.webp");
+                displayImage.src = sum > 10 ? "https://via.placeholder.com/200" : "https://via.placeholder.com/150";
+            });
+        </script>
+    </body>
+        <footer style="background-color: rgba(0,0,0,.7); margin-top: 200px; line-height: 2vh;">
+            <div class="footer">
+                <footer style="background-color: rgba(0,0,0,.7); line-height: 2vh;">
+                    <p style="text-align: center; color: white; padding: 4px; "><script>document.write(new Date().getFullYear())</script>, &copy;Copyright:)</p>
+                    <p style="text-align: center; color: white; padding: 4px; ">Hub. : 0896-XXX-XXXX</p>
+                    <p style="text-align: center; color: white; padding: 4px; ">Instagram : @mirdaafa</p>
+                </footer>
+        </footer>
+</body>
+</html>
